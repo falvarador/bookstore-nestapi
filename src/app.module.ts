@@ -7,9 +7,10 @@ import { AppService } from './app.service';
 import { ConfigService } from './config/config.service';
 
 import { Configuration } from './config/config.keys';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [ConfigModule],
+  imports: [ConfigModule, DatabaseModule],
   controllers: [AppController],
   providers: [AppService],
 })
